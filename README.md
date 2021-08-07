@@ -36,7 +36,7 @@ $ ./MAPS
 
 Acknowledging
 =============
-If you are using this code, please condider ackowledging the following papers.
+If you are using this code, please consider acknowledging the following papers.
 
 1. Mondal et al. 2018 https://doi.org/10.1093/mnras/stx2888
 2. Mondal et al 2019 https://doi.org/10.1093/mnrasl/sly226
