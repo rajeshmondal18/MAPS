@@ -19,7 +19,7 @@ $ make
 
 It will create the executable 'MAPS'.
 
-In thr 'Input Parameters' section of the code, you need to specify
+In the 'Input Parameters' section of the code, you need to specify
 
 1. The number of angular multipole (l) bins
 2. Grid spacing in Mpc
@@ -28,7 +28,7 @@ In thr 'Input Parameters' section of the code, you need to specify
 
 according to your need.
 
-An input data "LC8" (binary data) has been provided for testing.
+An input data "LC8" (binary data) has been provided here https://drive.google.com/file/d/1d-HxJvbzhs0I33YBL6_fuDUFCz24ArNw/view?usp=sharing for testing.
 
 To run:
 
