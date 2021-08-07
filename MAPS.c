@@ -41,29 +41,30 @@ void main()
   
   /****************************************************/
 
-  inp=fopen("LC8.txt","r");
+  inp=fopen("LC8","r");
 
-  fscanf(inp,"%d",&N1);
-  fscanf(inp,"%d",&N2);
-  fscanf(inp,"%d",&N3);
+  fread(&N1,sizeof(int),1,inp);
+  fread(&N2,sizeof(int),1,inp);
+  fread(&N3,sizeof(int),1,inp);
+  printf("N1=%d, N2=%d, N3=%d\n",N1,N2,N3);
   
-  printf("%d %d %d\n",N1,N2,N3);
+  /* allocate memory for HI map  ---------------*/
   
-  ro = allocate_fftwf_3d(N1,N2,N3+2);
+  ro=allocate_fftwf_3d(N1,N2,N3+2);
   
   double roion=0.0;
-  
+
   for(ii=0;ii<N1;ii++)
     for(jj=0;jj<N2;jj++)
       for(kk=0;kk<N3;kk++)
-	{
-          fscanf(inp,"%f", &ro[ii][jj][kk]); // check
+        {
+	  fread(&ro[ii][jj][kk],sizeof(float),1,inp);
 	  roion+=(double)ro[ii][jj][kk]; // check
 	}
   fclose(inp);
   
   roion/=(1.*N1*N2*N3); // mean HI density
-  printf("Mean Tb = %2.4f\n",roion);
+  printf("Mean Tb = %2.4lf mK\n",roion);
   
   /************ Input Parameters ***********************/
 
